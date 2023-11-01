@@ -10,9 +10,11 @@ db = SQLAlchemy(app)
 
 # Importar las rutas de usuario
 from routes.user import user_bp
+from routes.detail_attraction import detail_attraction_bp
 
 # Registrar las rutas de usuario
 app.register_blueprint(user_bp, url_prefix='/user')
+app.register_blueprint(detail_attraction_bp, url_prefix='/detail_attraction')
 
 if __name__ == '__main__':
     app.run()
